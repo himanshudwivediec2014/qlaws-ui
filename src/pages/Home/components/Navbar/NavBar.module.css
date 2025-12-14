@@ -1,0 +1,81 @@
+.navbar-wrapper {
+  box-shadow: 0px 1.54px 4.85px 0px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(6px);
+  margin-top: 26px;
+  margin-bottom: 55px;
+  width: 822px;
+  border-radius: 7.28px;
+}
+
+.navbar {
+  padding: 12px 23px 8px 23px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(10px);
+
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  width: 135px;
+  height: 35px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo .logo-img {
+  width: 21.17px;
+  height: 21.17px;
+  background-image: url("../../../../assets/vector.jpg");
+  margin-right: 4px;
+}
+
+.logo-text {
+  margin: 0;
+  font-weight: 500;
+  font-size: 23.9px;
+  line-height: 100%;
+  color: rgba(27, 54, 93, 1);
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  font-size: 14px;
+  color: #6b6b6b;
+}
+
+.nav-links li {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.nav-links li:hover {
+  color: #111;
+}
+
+.cta-button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+
+  background: linear-gradient(135deg, #ff6a00, #ff8a3d);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+  box-shadow: 0px 1px 2px 0px rgba(255, 255, 255, 0.4) inset;
+  backdrop-filter: blur(6px);
+}
