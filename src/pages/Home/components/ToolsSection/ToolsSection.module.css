@@ -1,0 +1,61 @@
+.our-tools-section {
+    margin-top: 105px;
+    width: 1240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.our-tools-section .our-tools-title-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 64px;
+    margin-bottom: 76px;
+    width: 930px;
+}
+
+.our-tools-section .our-tools-title-section .our-tools-badge {
+    margin-bottom: 15px;
+    padding: 6px 16px 6px 15px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(247, 95, 21, 1);
+    border-radius: 99px;
+}
+
+.our-tools-section .our-tools-title-section .our-tools-badge .tools-badge-text {
+    margin: 0;
+    font-weight: 500;
+    font-size: 13.67px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    color: rgba(27, 12, 37, 1);
+}
+
+.our-tools-section .our-tools-title-section .our-tools-title {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-weight: 500;
+    font-size: 58.83px;
+    line-height: 65px;
+    text-align: center;
+    vertical-align: middle;
+    color: rgba(27, 12, 37, 1);
+}
+
+.our-tools-title-section .our-tools-title .title-sub-text {
+    color: rgba(249, 112, 21, 1);
+}
+
+.our-tools-section .our-tools-title-section .our-tools-subtitle {
+    margin: 0;
+    width: 690px;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    vertical-align: middle;
+    color: rgba(97, 97, 97, 1);
+}
