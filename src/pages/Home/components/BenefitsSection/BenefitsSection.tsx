@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import styles from "./BenefitsSection.module.css";
 
 export interface Benefit {
@@ -44,39 +45,98 @@ const Benefits: Benefit[] = [
 ];
 
 const BenefitsSection: React.FC = () => {
-    const [benefits, setBenefits] = React.useState(Benefits);
+    const benefits = React.useMemo(() => Benefits, []);
     const leftColumnItems: Benefit[] = benefits.slice(0, benefits.length / 2);
     const rightColumnItems: Benefit[] = benefits.slice(benefits.length / 2);
     return (
-        <div className={styles["our-benefits-section"]}>
-            <div className={styles["our-benefits-title-section"]}>
-                <div className={styles["our-benefits-badge"]}>
+        <div className={`${styles["our-benefits-section"]} flex flex-col items-center`}>
+            <motion.div 
+                className={`${styles["our-benefits-title-section"]} flex flex-col items-center`}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6 }}
+            >
+                <motion.div 
+                    className={styles["our-benefits-badge"]}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                >
                     <h6 className={styles["benefits-badge-text"]}>
                         Key Benefits
                     </h6>
-                </div>
+                </motion.div>
 
-                <h2 className={styles["our-benefits-title"]}>
+                <motion.h2 
+                    className={`${styles["our-benefits-title"]} text-center`}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                >
                     Why Choose Qlaws
-                </h2>
+                </motion.h2>
 
-                <h6 className={styles["our-benefits-subtitle"]}>
+                <motion.h6 
+                    className={`${styles["our-benefits-subtitle"]} text-center`}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                >
                     QLaws offers AI-driven legal drafting, summarization, Word
                     integration, clause suggestions, compliance, and top-tier
                     data security.
-                </h6>
-            </div>
-            <div className={styles["benefits-showcase"]}>
-                <div className={styles["benefits-left-column"]}>
+                </motion.h6>
+            </motion.div>
+            <motion.div 
+                className={`${styles["benefits-showcase"]} flex justify-between items-center`}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+            >
+                <motion.div 
+                    className={`${styles["benefits-left-column"]} flex flex-col justify-between`}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={{
+                        hidden: { opacity: 0 },
+                        visible: {
+                            opacity: 1,
+                            transition: {
+                                staggerChildren: 0.15,
+                                delayChildren: 0.4,
+                            }
+                        }
+                    }}
+                >
                     {leftColumnItems?.map((benefit, index) => (
-                        <div key={index} className={styles["benefits-card"]}>
-                            <div className={styles["benefits-icon-holder"]}>
+                        <motion.div 
+                            key={index} 
+                            className={styles["benefits-card"]}
+                            variants={{
+                                hidden: { opacity: 0, x: -30 },
+                                visible: { opacity: 1, x: 0, transition: { duration: 0.5 } }
+                            }}
+                            whileHover={{ 
+                                x: 8,
+                                transition: { duration: 0.3 }
+                            }}
+                        >
+                            <motion.div 
+                                className={`${styles["benefits-icon-holder"]} flex justify-center items-center`}
+                                whileHover={{ rotate: 360, transition: { duration: 0.6 } }}
+                            >
                                 <img
                                     src={benefit.icon}
                                     alt={benefit.title}
                                     className={styles["benefits-icon"]}
                                 />
-                            </div>
+                            </motion.div>
 
                             <h2 className={styles["benefits-title"]}>
                                 {benefit.title}
@@ -85,22 +145,57 @@ const BenefitsSection: React.FC = () => {
                             <p className={styles["benefits-description"]}>
                                 {benefit.description}
                             </p>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
 
-                <div className={styles["benefits-centre-section"]}></div>
+                <motion.div 
+                    className={styles["benefits-centre-section"]}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.5 }}
+                ></motion.div>
 
-                <div className={styles["benefits-right-column"]}>
+                <motion.div 
+                    className={`${styles["benefits-right-column"]} flex flex-col justify-between`}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={{
+                        hidden: { opacity: 0 },
+                        visible: {
+                            opacity: 1,
+                            transition: {
+                                staggerChildren: 0.15,
+                                delayChildren: 0.4,
+                            }
+                        }
+                    }}
+                >
                     {rightColumnItems?.map((benefit, index) => (
-                        <div key={index} className={styles["benefits-card"]}>
-                            <div className={styles["benefits-icon-holder"]}>
+                        <motion.div 
+                            key={index} 
+                            className={styles["benefits-card"]}
+                            variants={{
+                                hidden: { opacity: 0, x: 30 },
+                                visible: { opacity: 1, x: 0, transition: { duration: 0.5 } }
+                            }}
+                            whileHover={{ 
+                                x: -8,
+                                transition: { duration: 0.3 }
+                            }}
+                        >
+                            <motion.div 
+                                className={`${styles["benefits-icon-holder"]} flex justify-center items-center`}
+                                whileHover={{ rotate: 360, transition: { duration: 0.6 } }}
+                            >
                                 <img
                                     src={benefit.icon}
                                     alt={benefit.title}
                                     className={styles["benefits-icon"]}
                                 />
-                            </div>
+                            </motion.div>
 
                             <h2 className={styles["benefits-title"]}>
                                 {benefit.title}
@@ -109,12 +204,20 @@ const BenefitsSection: React.FC = () => {
                             <p className={styles["benefits-description"]}>
                                 {benefit.description}
                             </p>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
 
-            <button className={styles["book-demo-handler"]}>Book a Demo</button>
+            <motion.button 
+                className={styles["book-demo-handler"]}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                whileTap={{ scale: 0.95 }}
+            >Book a Demo</motion.button>
         </div>
     );
 };

@@ -1,19 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
-:root {
-  font-family: "Outfit", system-ui, Avenir, Helvetica, Arial, sans-serif;
+@import "tailwindcss";
 
-  height: 100%;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@layer base {
+  :root {
+    font-family: "Outfit", system-ui, Avenir, Helvetica, Arial, sans-serif;
+    height: 100%;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-#root {
-  height: 100%;
-}
+  #root {
+    height: 100%;
+  }
 
-body {
-  margin: 0;
-  height: 100%;
+  body {
+    margin: 0;
+    height: 100%;
+  }
 }

@@ -1,16 +1,9 @@
 .challenge-section {
     margin-top: 63px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .challenge-section .challenge-cards {
     width: 1174px;
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 24px;
     margin-bottom: 90px;
 }
 
@@ -27,7 +20,6 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    text-align: center;
     vertical-align: middle;
     color: rgba(220, 38, 38, 1);
 }
@@ -37,7 +29,6 @@
     font-style: Bold;
     font-size: 36px;
     line-height: 40px;
-    text-align: center;
     vertical-align: middle;
     color: rgba(33, 36, 44, 1);
     margin: 0 0 16px 0;
@@ -48,7 +39,6 @@
     font-style: Regular;
     font-size: 16px;
     line-height: 24px;
-    text-align: center;
     vertical-align: middle;
     color: rgba(103, 111, 126, 1);
     margin: 0 0 48px 0;

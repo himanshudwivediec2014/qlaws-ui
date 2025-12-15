@@ -1,0 +1,112 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1000;
+}
+
+.scroll-button {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(247, 95, 21, 1) 0%, rgba(249, 112, 21, 1) 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 12px rgba(247, 95, 21, 0.3),
+                0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: fadeInUp 0.4s ease-out;
+}
+
+.scroll-button:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0px 8px 20px rgba(247, 95, 21, 0.4),
+                0px 4px 8px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, rgba(249, 112, 21, 1) 0%, rgba(247, 95, 21, 1) 100%);
+}
+
+.scroll-button:active {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0px 4px 12px rgba(247, 95, 21, 0.3);
+}
+
+.arrow-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: bounceUp 2s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.progress-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg);
+    pointer-events: none;
+}
+
+.progress-ring-circle-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.2);
+    stroke-width: 3;
+}
+
+.progress-ring-circle {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.9);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-dasharray: 163.36;
+    transition: stroke-dashoffset 0.1s linear;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceUp {
+    0%, 100% {
+        transform: translate(-50%, -50%) translateY(0);
+    }
+    50% {
+        transform: translate(-50%, -50%) translateY(-4px);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .scroll-to-top {
+        bottom: 24px;
+        right: 24px;
+    }
+
+    .scroll-button {
+        width: 48px;
+        height: 48px;
+    }
+
+    .arrow-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .progress-ring {
+        width: 48px;
+        height: 48px;
+    }
+}
+

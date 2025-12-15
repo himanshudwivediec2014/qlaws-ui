@@ -1,42 +1,5 @@
-.card-content-wrapper {
-  padding: 24px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  border: 1px solid rgba(235, 230, 224, 1);
-  border-radius: 16px;
-  width: 325.33px;
-}
-
-.card-icon {
-  width: 40px;
-  height: 40px;
-  margin-right: 16px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
+/* Custom styles for icon holder background image */
 .card-icon .icon-holder {
   width: 20px;
   height: 20px;
-}
-
-.card-description {
-  margin: 0;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  vertical-align: middle;
-  color: rgba(33, 36, 44, 1);
-  white-space: normal;
-}
-
-.danger {
-  background-color: rgba(254, 242, 242, 1);
-}
-
-.warning {
-  background-color: rgba(254, 242, 242, 1);
 }
