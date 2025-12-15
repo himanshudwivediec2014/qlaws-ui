@@ -11,6 +11,7 @@ import TeamsSection from "./components/TeamsSection/Teams";
 import ChallengesSection from "./components/ChallengesSection/ChallengesSection";
 import SolutionsSection from "./components/SolutionsSection/SolutionsSection";
 import BenefitsSection from "./components/BenefitsSection/BenefitsSection";
+import TestimonialsSection from "./components/TestimonialsSection/TestimonialSection";
 
 export const HomeCardSm: CardSmModel[] = [
     {
@@ -83,6 +84,8 @@ const Home: React.FC = () => {
                 <ToolsSection />
 
                 <BenefitsSection />
+
+                <TestimonialsSection />
             </div>
         </div>
     );
