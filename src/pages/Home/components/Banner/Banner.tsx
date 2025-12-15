@@ -6,7 +6,6 @@ const Banner: React.FC = () => {
       <div className={styles["sol-txt"]}>
         <h6 className={styles.txt}>Agentic Ai Solutions</h6>
       </div>
-
       <div className={styles["banner-info"]}>
         <h1 className={styles["banner-text"]}>
           Transform Agentic Legal Drafting with{" "}
