@@ -2,6 +2,13 @@ import { motion } from "framer-motion";
 import styles from "./NavBar.module.css";
 
 const Navbar: React.FC = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <motion.nav 
       className={`${styles["navbar-wrapper"]} mt-[26px] mb-[55px] w-[822px] rounded-[7.28px]`}
@@ -42,6 +49,7 @@ const Navbar: React.FC = () => {
               visible: { opacity: 1, y: 0 }
             }}
             whileHover={{ y: -2, transition: { duration: 0.2 } }}
+            onClick={() => scrollToSection("features")}
           >Features</motion.li>
           <motion.li 
             className="cursor-pointer transition-colors duration-200 hover:text-[#111]"
@@ -50,6 +58,7 @@ const Navbar: React.FC = () => {
               visible: { opacity: 1, y: 0 }
             }}
             whileHover={{ y: -2, transition: { duration: 0.2 } }}
+            onClick={() => scrollToSection("about")}
           >About</motion.li>
           <motion.li 
             className="cursor-pointer transition-colors duration-200 hover:text-[#111]"
@@ -58,6 +67,7 @@ const Navbar: React.FC = () => {
               visible: { opacity: 1, y: 0 }
             }}
             whileHover={{ y: -2, transition: { duration: 0.2 } }}
+            onClick={() => scrollToSection("testimonial")}
           >Testimonial</motion.li>
           <motion.li 
             className="cursor-pointer transition-colors duration-200 hover:text-[#111]"

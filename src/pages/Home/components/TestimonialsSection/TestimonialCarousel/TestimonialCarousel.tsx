@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./TestimonialCarousel.module.css";
 
 export type Testimonial = {
@@ -20,6 +20,14 @@ export const TestimonialCarousel = ({ testimonials }: Props) => {
         setActive((p) => (p === 0 ? testimonials.length - 1 : p - 1));
     const next = () =>
         setActive((p) => (p === testimonials.length - 1 ? 0 : p + 1));
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setActive((p) => (p === testimonials.length - 1 ? 0 : p + 1));
+        }, 5000);
+
+        return () => clearInterval(interval);
+    }, [testimonials.length]);
 
     return (
         <div className={styles["carousel-wrapper"]}>

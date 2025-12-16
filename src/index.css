@@ -2,6 +2,10 @@
 @import "tailwindcss";
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   :root {
     font-family: "Outfit", system-ui, Avenir, Helvetica, Arial, sans-serif;
     height: 100%;

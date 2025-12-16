@@ -23,13 +23,19 @@ const Home: React.FC = () => {
 
                 <SolutionsSection />
 
-                <TeamsSection />
+                <div id="about">
+                    <TeamsSection />
+                </div>
 
-                <ToolsSection />
+                <div id="features">
+                    <ToolsSection />
+                </div>
 
                 <BenefitsSection />
 
-                <TestimonialsSection />
+                <div id="testimonial">
+                    <TestimonialsSection />
+                </div>
 
                 <Footer />
             </div>
