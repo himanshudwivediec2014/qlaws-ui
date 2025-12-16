@@ -8,21 +8,21 @@ const sampleTestimonials = [
         id: "1",
         text: "qlaws.ai is shaping up to be an innovative solution for legal professionals. Even during testing, the platform has shown how it can save time and improve efficiency in legal research.",
         avatar: avatarImage,
-        name: "Sarah J.",
+        author: "Sarah J.",
         designation: "Data Analyst, TechCorp",
     },
     {
         id: "2",
         text: "qlaws.ai is shaping up to be an innovative solution for legal professionals. Even during testing, the platform has shown how it can save time and improve efficiency in legal research.",
         avatar: avatarImage,
-        name: "Daniel O.",
+        author: "Daniel O.",
         designation: "Senior Associate",
     },
     {
         id: "3",
         text: "qlaws.ai is shaping up to be an innovative solution for legal professionals. Even during testing, the platform has shown how it can save time and improve efficiency in legal research.",
         avatar: avatarImage,
-        name: "Aisha R.",
+        author: "Aisha R.",
         designation: "Head of Litigation",
     },
 ];
@@ -43,13 +43,7 @@ const TestimonialsSection: React.FC = () => {
             </div>
 
             <div className={styles["carousel-wrapper"]}>
-                <TestimonialCarousel
-                    testimonials={sampleTestimonials}
-                    autoplay
-                    autoplayInterval={7000}
-                    showNav
-                    showDots
-                />
+                <TestimonialCarousel testimonials={sampleTestimonials} />
 
                 <div className={styles["testimonials-counters"]}>
                     <div className={styles["counter"]}>
