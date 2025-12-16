@@ -10,6 +10,7 @@ import BenefitsSection from "./components/BenefitsSection/BenefitsSection";
 import Footer from "./components/Footer/Footer";
 import { ScrollToTop } from "../../shared/components";
 import TestimonialsSection from "./components/TestimonialsSection/TestimonialSection";
+import FAQSection from "./components/FAQSection/FAQSection";
 
 const Home: React.FC = () => {
     return (
@@ -27,19 +28,23 @@ const Home: React.FC = () => {
                     <TeamsSection />
                 </div>
 
-                <div id="features">
+                <div id="features" className="w-full">
                     <ToolsSection />
                 </div>
 
                 <BenefitsSection />
 
-                <div id="testimonial">
+                <div id="testimonial" className="w-full">
                     <TestimonialsSection />
+                </div>
+
+                <div id="faq" className="w-full">
+                    <FAQSection />
                 </div>
 
                 <Footer />
             </div>
-            
+
             <ScrollToTop />
         </div>
     );
