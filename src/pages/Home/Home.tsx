@@ -28,7 +28,7 @@ const Home: React.FC = () => {
                     <TeamsSection />
                 </div>
 
-                <div id="features" className="w-full">
+                <div id="features">
                     <ToolsSection />
                 </div>
 
@@ -38,7 +38,7 @@ const Home: React.FC = () => {
                     <TestimonialsSection />
                 </div>
 
-                <div id="faq" className="w-full">
+                <div id="faq">
                     <FAQSection />
                 </div>
 
