@@ -7,18 +7,22 @@ import CardSm from "../../../../shared/components/Card-sm/Card-sm";
 const ChallengesSection: React.FC = () => {
     const cards = React.useMemo(() => [...HOME_CARD_SM], []);
     return (
-        <div className={`${styles["challenge-section"]} flex flex-col items-center`}>
-            <motion.div 
+        <div
+            className={`${styles["challenge-section"]} flex flex-col items-center`}
+        >
+            <motion.div
                 className={styles["challenge-badge"]}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.5 }}
             >
-                <h6 className={`${styles["badge-text"]} text-center`}>The Challenge</h6>
+                <h6 className={`${styles["badge-text"]} text-center`}>
+                    The Challenge
+                </h6>
             </motion.div>
 
-            <motion.h2 
+            <motion.h2
                 className={`${styles["challenge-title"]} text-center`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -28,7 +32,7 @@ const ChallengesSection: React.FC = () => {
                 The Problem With Today's Legal AI
             </motion.h2>
 
-            <motion.h6 
+            <motion.h6
                 className={`${styles["challenge-subtitle"]} text-center`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -39,8 +43,8 @@ const ChallengesSection: React.FC = () => {
                 workflows.
             </motion.h6>
 
-            <motion.div 
-                className={`${styles["challenge-cards"]} flex justify-start flex-wrap gap-6`}
+            <motion.div
+                className={`${styles["challenge-cards"]} flex justify-center flex-wrap gap-6`}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-50px" }}
@@ -51,8 +55,8 @@ const ChallengesSection: React.FC = () => {
                         transition: {
                             staggerChildren: 0.1,
                             delayChildren: 0.4,
-                        }
-                    }
+                        },
+                    },
                 }}
             >
                 {cards.map((card, index) => (
