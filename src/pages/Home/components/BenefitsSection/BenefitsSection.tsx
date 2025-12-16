@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import styles from "./BenefitsSection.module.css";
+import benefitTickMarkIcon from "../../../../assets/benefit-tick-mark.png";
 
 export interface Benefit {
     title: string;
@@ -12,35 +13,35 @@ const Benefits: Benefit[] = [
     {
         title: "Compliance-Ready Outputs",
         description: "Ensure documents meet legal standards and regulations.",
-        icon: "src/assets/benefit-tick-mark.png",
+        icon: benefitTickMarkIcon,
     },
     {
         title: "Scalable Solutions",
         description: "Easily grow with the demands of your data",
-        icon: "src/assets/benefit-tick-mark.png",
+        icon: benefitTickMarkIcon,
     },
     {
         title: "Collaboration Tools",
         description:
             "Enable multiple team members to review and edit documents simultaneously.",
-        icon: "src/assets/benefit-tick-mark.png",
+        icon: benefitTickMarkIcon,
     },
     {
         title: "Intelligent clause suggestions",
         description:
             "Get context-aware recommendations for clauses and precedents.",
-        icon: "src/assets/benefit-tick-mark.png",
+        icon: benefitTickMarkIcon,
     },
     {
         title: "Secure and confidential",
         description: "Protect sensitive information with top-level security.",
-        icon: "src/assets/benefit-tick-mark.png",
+        icon: benefitTickMarkIcon,
     },
     {
         title: "Automated Risk Analysis",
         description:
             "Identify potential legal risks and red flags in documents before finalizing.",
-        icon: "src/assets/benefit-tick-mark.png",
+        icon: benefitTickMarkIcon,
     },
 ];
 

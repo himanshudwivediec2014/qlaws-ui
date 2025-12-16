@@ -18,7 +18,7 @@ const CardLg: React.FC<CardLgModel> = ({ text, title, variant = "info", icon }) 
 
   return (
     <motion.div 
-      className={`${styles["card-content-wrapper"]} p-[33px] flex flex-col items-start border border-[rgba(235,230,224,1)] rounded-[20px] w-[270px] h-[237px] bg-white shadow-[0px_4px_24px_-4px_rgba(166,120,89,0.1)]`}
+      className={`${styles["card-content-wrapper"]} p-[33px] flex flex-col items-start border border-[rgba(235,230,224,1)] rounded-[20px] h-[237px] bg-white shadow-[0px_4px_24px_-4px_rgba(166,120,89,0.1)]`}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}

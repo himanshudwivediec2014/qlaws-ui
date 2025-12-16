@@ -1,12 +1,14 @@
 .our-tools-section {
     margin-top: 105px;
-    width: 1240px;
+    width: 100%;
+    max-width: 1240px;
+    padding: 0 16px;
 }
 
 .our-tools-section .our-tools-title-section {
-    margin-bottom: 64px;
     margin-bottom: 76px;
-    width: 930px;
+    width: 100%;
+    max-width: 930px;
 }
 
 .our-tools-section .our-tools-title-section .our-tools-badge {
@@ -50,4 +52,124 @@
     line-height: 22px;
     vertical-align: middle;
     color: rgba(97, 97, 97, 1);
+}
+
+.tools-showcase {
+    width: 100%;
+}
+
+.tools-images-row {
+    display: flex;
+    width: 100%;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.tool-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.tool-card-sm {
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+
+.tool-card-lg {
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+
+.tool-image-wrapper {
+    width: 100%;
+    height: 320px; /* ensures equal image height on desktop */
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.tool-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.tool-title {
+    margin: 16px 0 8px;
+    font-weight: 600;
+    font-size: 22.88px;
+    /* `SemiBold` maps to a numeric font-weight; already handled by 600 */
+    letter-spacing: 0;
+    vertical-align: middle;
+    color: #1b0c25;
+}
+
+.tool-description {
+    margin: 0;
+    font-size: 15.13px;
+    line-height: 26px;
+    letter-spacing: 0;
+    vertical-align: middle;
+    color: #616161;
+}
+
+/* Responsive styles */
+
+@media (max-width: 1024px) {
+    .our-tools-section {
+        margin-top: 72px;
+        padding: 0 20px;
+    }
+
+    .our-tools-section .our-tools-title-section {
+        margin-bottom: 56px;
+    }
+
+    .tools-images-row {
+        gap: 20px;
+    }
+
+    .tool-card-sm,
+    .tool-card-lg {
+        flex: 1 1 50%;
+        max-width: 50%;
+    }
+
+    .tool-image-wrapper {
+        height: 260px;
+    }
+}
+
+@media (max-width: 768px) {
+    .our-tools-section {
+        margin-top: 56px;
+        padding: 0 16px;
+    }
+
+    .our-tools-section .our-tools-title-section {
+        margin-bottom: 40px;
+    }
+
+    .our-tools-section .our-tools-title-section .our-tools-title {
+        font-size: 40px;
+        line-height: 46px;
+    }
+
+    .our-tools-section .our-tools-title-section .our-tools-subtitle {
+        width: 100%;
+    }
+
+    .tools-images-row {
+        flex-direction: column;
+    }
+
+    .tool-card-sm,
+    .tool-card-lg {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .tool-image-wrapper {
+        height: 220px;
+    }
 }

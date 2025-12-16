@@ -1,3 +1,9 @@
+.card-content-wrapper {
+  width: 320px;
+  min-width: 320px;
+  max-width: 320px;
+}
+
 /* Custom styles for icon holder background image */
 .card-icon .icon-holder {
   width: 20px;
