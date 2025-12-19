@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./FAQSection.module.css";
 import Accordion from "./Accordion/Accordion";
+import { motion } from "framer-motion";
 
 type FAQItem = {
     id: string;
@@ -56,16 +57,49 @@ const FAQSection: React.FC = () => {
 
     return (
         <section className={`flex justify-between ${styles["faq-wrapper"]}`}>
-            <div className={styles["left-section"]}>
-                <div className={styles["faq-badge"]}>
+            <motion.div
+                className={styles["left-section"]}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={{
+                    hidden: { opacity: 0 },
+                    visible: {
+                        opacity: 1,
+                        transition: {
+                            staggerChildren: 0.15,
+                            delayChildren: 0.4,
+                        },
+                    },
+                }}
+            >
+                <motion.div
+                    className={styles["faq-badge"]}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                >
                     <h2 className={styles["faq-badge-text"]}>faq</h2>
-                </div>
+                </motion.div>
 
-                <h2 className={styles["faq-title"]}>
+                <motion.h2
+                    className={styles["faq-title"]}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                >
                     Frequently Asked Questions
-                </h2>
+                </motion.h2>
 
-                <div className={styles["faq-sub-title-section"]}>
+                <motion.div
+                    className={styles["faq-sub-title-section"]}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                >
                     <h2 className={styles["faq-subtitle"]}>
                         Still have a question?
                     </h2>
@@ -76,10 +110,25 @@ const FAQSection: React.FC = () => {
                         </span>{" "}
                         We'll be happy to help you.
                     </p>
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
 
-            <div className={styles["right-section"]}>
+            <motion.div
+                className={styles["right-section"]}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={{
+                    hidden: { opacity: 0 },
+                    visible: {
+                        opacity: 1,
+                        transition: {
+                            staggerChildren: 0.15,
+                            delayChildren: 0.4,
+                        },
+                    },
+                }}
+            >
                 <div className="flex flex-col gap-4">
                     {FAQ_DATA.map((item, index) => (
                         // key is set here (React uses key; it's not forwarded as a prop)
@@ -93,7 +142,7 @@ const FAQSection: React.FC = () => {
                         />
                     ))}
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 };
