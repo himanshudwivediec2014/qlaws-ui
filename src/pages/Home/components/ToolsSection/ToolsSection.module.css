@@ -167,9 +167,15 @@
     .tool-card-lg {
         flex: 1 1 100%;
         max-width: 100%;
+        margin-bottom: 24px;
+        width: 100%;
     }
 
     .tool-image-wrapper {
         height: 220px;
+    }
+
+    .tool-image-wrapper img {
+        object-fit: contain;
     }
 }

@@ -28,13 +28,13 @@ const Home: React.FC = () => {
                     <TeamsSection />
                 </div>
 
-                {/*<div id="features">
+                <div id="features">
                     <ToolsSection />
                 </div>
 
-                <BenefitsSection />
+                {/* <BenefitsSection /> */}
 
-                <div id="testimonial" className="w-full">
+                {/*<div id="testimonial" className="w-full">
                     <TestimonialsSection />
                 </div>
 
