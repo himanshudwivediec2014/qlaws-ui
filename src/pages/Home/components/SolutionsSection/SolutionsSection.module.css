@@ -68,6 +68,11 @@
     .solution-section {
         border-radius: 0;
     }
+
+    .solution-info-section {
+        margin-top: 40px;
+        border-radius: 20px;
+    }
 }
 
 @media (max-width: 1080px) {

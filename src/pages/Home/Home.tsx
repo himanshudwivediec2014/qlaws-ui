@@ -24,11 +24,11 @@ const Home: React.FC = () => {
 
                 <SolutionsSection />
 
-                {/*<div id="about">
+                <div id="about">
                     <TeamsSection />
                 </div>
 
-                <div id="features">
+                {/*<div id="features">
                     <ToolsSection />
                 </div>
 

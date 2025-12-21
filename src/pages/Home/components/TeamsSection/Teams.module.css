@@ -3,18 +3,18 @@
     margin-bottom: 28px;
 }
 
-.our-team-section .our-team-titel-section {
+.our-team-section .our-team-title-section {
     max-width: 720px;
 }
 
-.our-team-section .our-team-titel-section .our-team-badge {
+.our-team-section .our-team-title-section .our-team-badge {
     padding: 8px 16px;
     background-color: rgba(251, 245, 239, 1);
     border-radius: 99px;
     margin-bottom: 16px;
 }
 
-.our-team-section .our-team-titel-section .our-team-badge .team-badge-text {
+.our-team-section .our-team-title-section .our-team-badge .team-badge-text {
     font-weight: 500;
     font-style: Medium;
     font-size: 14px;
@@ -24,7 +24,7 @@
     margin: 0;
 }
 
-.our-team-section .our-team-titel-section .our-team-title {
+.our-team-section .our-team-title-section .our-team-title {
     margin: 0 0 16px 0;
     font-weight: 700;
     font-style: Bold;
@@ -34,7 +34,7 @@
     color: rgba(33, 36, 44, 1);
 }
 
-.our-team-section .our-team-titel-section .our-team-subtitle {
+.our-team-section .our-team-title-section .our-team-subtitle {
     margin: 0;
     font-weight: 400;
     font-style: Regular;
@@ -51,4 +51,10 @@
     background-image: url("../../../../assets/team-companies.png");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+@media (max-width: 768px) {
+    .our-team-section .our-team-title-section {
+        padding: 24px;
+    }
 }
