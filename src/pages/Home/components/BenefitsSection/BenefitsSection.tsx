@@ -50,15 +50,17 @@ const BenefitsSection: React.FC = () => {
     const leftColumnItems: Benefit[] = benefits.slice(0, benefits.length / 2);
     const rightColumnItems: Benefit[] = benefits.slice(benefits.length / 2);
     return (
-        <div className={`${styles["our-benefits-section"]} flex flex-col items-center`}>
-            <motion.div 
+        <div
+            className={`${styles["our-benefits-section"]} flex flex-col items-center`}
+        >
+            <motion.div
                 className={`${styles["our-benefits-title-section"]} flex flex-col items-center`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
             >
-                <motion.div 
+                <motion.div
                     className={styles["our-benefits-badge"]}
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -66,11 +68,11 @@ const BenefitsSection: React.FC = () => {
                     transition={{ duration: 0.5, delay: 0.2 }}
                 >
                     <h6 className={styles["benefits-badge-text"]}>
-                        Key Benefits
+                        Why Choose QLaws
                     </h6>
                 </motion.div>
 
-                <motion.h2 
+                <motion.h2
                     className={`${styles["our-benefits-title"]} text-center`}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -80,7 +82,7 @@ const BenefitsSection: React.FC = () => {
                     Why Choose Qlaws
                 </motion.h2>
 
-                <motion.h6 
+                <motion.h6
                     className={`${styles["our-benefits-subtitle"]} text-center`}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -92,14 +94,14 @@ const BenefitsSection: React.FC = () => {
                     data security.
                 </motion.h6>
             </motion.div>
-            <motion.div 
+            <motion.div
                 className={`${styles["benefits-showcase"]} flex justify-between items-center`}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: 0.3 }}
             >
-                <motion.div 
+                <motion.div
                     className={`${styles["benefits-left-column"]} flex flex-col justify-between`}
                     initial="hidden"
                     whileInView="visible"
@@ -111,26 +113,33 @@ const BenefitsSection: React.FC = () => {
                             transition: {
                                 staggerChildren: 0.15,
                                 delayChildren: 0.4,
-                            }
-                        }
+                            },
+                        },
                     }}
                 >
                     {leftColumnItems?.map((benefit, index) => (
-                        <motion.div 
-                            key={index} 
+                        <motion.div
+                            key={index}
                             className={styles["benefits-card"]}
                             variants={{
                                 hidden: { opacity: 0, x: -30 },
-                                visible: { opacity: 1, x: 0, transition: { duration: 0.5 } }
+                                visible: {
+                                    opacity: 1,
+                                    x: 0,
+                                    transition: { duration: 0.5 },
+                                },
                             }}
-                            whileHover={{ 
+                            whileHover={{
                                 x: 8,
-                                transition: { duration: 0.3 }
+                                transition: { duration: 0.3 },
                             }}
                         >
-                            <motion.div 
+                            <motion.div
                                 className={`${styles["benefits-icon-holder"]} flex justify-center items-center`}
-                                whileHover={{ rotate: 360, transition: { duration: 0.6 } }}
+                                whileHover={{
+                                    rotate: 360,
+                                    transition: { duration: 0.6 },
+                                }}
                             >
                                 <img
                                     src={benefit.icon}
@@ -150,7 +159,7 @@ const BenefitsSection: React.FC = () => {
                     ))}
                 </motion.div>
 
-                <motion.div 
+                <motion.div
                     className={styles["benefits-centre-section"]}
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -158,7 +167,7 @@ const BenefitsSection: React.FC = () => {
                     transition={{ duration: 0.8, delay: 0.5 }}
                 ></motion.div>
 
-                <motion.div 
+                <motion.div
                     className={`${styles["benefits-right-column"]} flex flex-col justify-between`}
                     initial="hidden"
                     whileInView="visible"
@@ -170,26 +179,33 @@ const BenefitsSection: React.FC = () => {
                             transition: {
                                 staggerChildren: 0.15,
                                 delayChildren: 0.4,
-                            }
-                        }
+                            },
+                        },
                     }}
                 >
                     {rightColumnItems?.map((benefit, index) => (
-                        <motion.div 
-                            key={index} 
+                        <motion.div
+                            key={index}
                             className={styles["benefits-card"]}
                             variants={{
                                 hidden: { opacity: 0, x: 30 },
-                                visible: { opacity: 1, x: 0, transition: { duration: 0.5 } }
+                                visible: {
+                                    opacity: 1,
+                                    x: 0,
+                                    transition: { duration: 0.5 },
+                                },
                             }}
-                            whileHover={{ 
+                            whileHover={{
                                 x: -8,
-                                transition: { duration: 0.3 }
+                                transition: { duration: 0.3 },
                             }}
                         >
-                            <motion.div 
+                            <motion.div
                                 className={`${styles["benefits-icon-holder"]} flex justify-center items-center`}
-                                whileHover={{ rotate: 360, transition: { duration: 0.6 } }}
+                                whileHover={{
+                                    rotate: 360,
+                                    transition: { duration: 0.6 },
+                                }}
                             >
                                 <img
                                     src={benefit.icon}
@@ -210,15 +226,30 @@ const BenefitsSection: React.FC = () => {
                 </motion.div>
             </motion.div>
 
-            <motion.button 
-                className={styles["book-demo-handler"]}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.8 }}
-                whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-                whileTap={{ scale: 0.95 }}
-            >Book a Demo</motion.button>
+            <motion.div className={styles["actions-wrapper"]}>
+                <motion.button
+                    className={styles["get-started-handler"]}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.8 }}
+                    whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                    whileTap={{ scale: 0.95 }}
+                >
+                    Get Started
+                </motion.button>
+                <motion.button
+                    className={styles["book-demo-handler"]}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.8 }}
+                    whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                    whileTap={{ scale: 0.95 }}
+                >
+                    Book a Demo
+                </motion.button>
+            </motion.div>
         </div>
     );
 };

@@ -32,7 +32,7 @@ const Home: React.FC = () => {
                     <ToolsSection />
                 </div>
 
-                {/* <BenefitsSection /> */}
+                <BenefitsSection />
 
                 {/*<div id="testimonial" className="w-full">
                     <TestimonialsSection />
