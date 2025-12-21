@@ -1,5 +1,5 @@
 .challenge-section {
-    margin-top: 63px;
+    margin-top: 130px;
 }
 
 .challenge-section .challenge-cards {
@@ -42,4 +42,26 @@
     vertical-align: middle;
     color: rgba(103, 111, 126, 1);
     margin: 0 0 48px 0;
+}
+
+@media screen and (min-width: 531px) and (max-width: 767px) {
+    .challenge-section {
+        margin-top: 196px;
+        padding: 0 24px 24px 24px;
+    }
+}
+
+@media (max-width: 520px) {
+    .challenge-section {
+        margin-top: 156px;
+        padding: 0 24px 24px 24px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .challenge-section .challenge-cards {
+        display: flex;
+        flex-direction: column;
+        width: unset;
+    }
 }

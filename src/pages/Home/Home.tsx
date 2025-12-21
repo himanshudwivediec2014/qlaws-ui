@@ -22,7 +22,7 @@ const Home: React.FC = () => {
 
                 <ChallengesSection />
 
-                <SolutionsSection />
+                {/* <SolutionsSection />
 
                 <div id="about">
                     <TeamsSection />
@@ -42,7 +42,7 @@ const Home: React.FC = () => {
                     <FAQSection />
                 </div>
 
-                <Footer />
+                <Footer /> */}
             </div>
 
             <ScrollToTop />

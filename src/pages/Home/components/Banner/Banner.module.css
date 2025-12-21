@@ -207,3 +207,62 @@
         font-size: 15px;
     }
 }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .banner-info {
+        margin-bottom: 24px;
+    }
+
+    .banner-info .banner-text {
+        font-size: 36px;
+        line-height: 45px;
+    }
+
+    .banner-info .banner-sub-text {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .banner-actions {
+        width: 100%;
+        margin-bottom: 48px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner-action-button {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+
+    .banner-overlay {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-overlay {
+        max-width: 100%;
+        padding-bottom: 12px;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+    }
+
+    .banner-overlay .frame {
+        border-bottom-left-radius: 32px;
+        border-bottom-right-radius: 32px;
+    }
+    .banner-content-wrapper {
+        padding: 0 16px;
+        margin-top: 57px;
+    }
+    .sol-txt {
+        background-color: rgba(251, 245, 239, 1);
+    }
+
+    .sol-txt h6.txt {
+        color: rgba(103, 111, 126, 1);
+    }
+}
