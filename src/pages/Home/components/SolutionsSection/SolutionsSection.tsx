@@ -8,27 +8,31 @@ const SolutionsSection: React.FC = () => {
     const solCards = React.useMemo(() => [...HOME_CARD_LG], []);
 
     return (
-        <div className={`${styles["solution-section"]} flex flex-col items-center`}>
-            <motion.div 
+        <div
+            className={`${styles["solution-section"]} flex flex-col items-center`}
+        >
+            <motion.div
                 className={`${styles["solution-title-section"]} flex flex-col items-center`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
             >
-                <motion.div 
+                <motion.div
                     className={styles["solution-badge"]}
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                    <h2 className={`${styles["solution-badge-text"]} text-center`}>
+                    <h2
+                        className={`${styles["solution-badge-text"]} text-center`}
+                    >
                         The Solution
                     </h2>
                 </motion.div>
 
-                <motion.h2 
+                <motion.h2
                     className={`${styles["solution-title"]} text-center`}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -38,7 +42,7 @@ const SolutionsSection: React.FC = () => {
                     How Qlaws Solves This
                 </motion.h2>
 
-                <motion.h6 
+                <motion.h6
                     className={`${styles["solution-subtitle"]} text-center`}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -49,8 +53,8 @@ const SolutionsSection: React.FC = () => {
                 </motion.h6>
             </motion.div>
 
-            <motion.div 
-                className={`${styles["solution-info-section"]} flex justify-start items-center gap-8`}
+            <motion.div
+                className={`${styles["solution-info-section"]} flex justify-start items-center sm:gap-4 lg:gap-8`}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-50px" }}
@@ -61,8 +65,8 @@ const SolutionsSection: React.FC = () => {
                         transition: {
                             staggerChildren: 0.15,
                             delayChildren: 0.2,
-                        }
-                    }
+                        },
+                    },
                 }}
             >
                 {solCards.map((solCard, index) => (

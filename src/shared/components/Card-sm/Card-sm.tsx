@@ -18,7 +18,7 @@ const CardSm: React.FC<CardSmModel> = ({ text, variant = "info", icon }) => {
 
     return (
         <motion.div
-            className={`${styles["card-content-wrapper"]} p-6 flex justify-start items-center border border-[rgba(235,230,224,1)] rounded-2xl lg:w-[325.33px]`}
+            className="p-6 flex justify-start items-center border border-[rgba(235,230,224,1)] rounded-2xl lg:w-[325.33px]"
             variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },

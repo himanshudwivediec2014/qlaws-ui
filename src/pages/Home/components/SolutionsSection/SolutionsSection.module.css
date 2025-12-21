@@ -54,4 +54,37 @@
 
 .solution-info-section {
     margin-top: 64px;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .solution-info-section {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .solution-section {
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 1080px) {
+    .solution-section {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .solution-section .card-content-wrapper {
+        height: 100%;
+    }
+
+    .solution-title-section .solution-badge {
+        background-color: rgba(255, 255, 255, 1);
+        border: 1px solid rgba(247, 95, 21, 1);
+    }
+
+    .solution-title-section .card-content-wrapper .solution-badge-text {
+        color: rgba(249, 112, 21, 1);
+    }
 }

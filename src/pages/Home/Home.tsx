@@ -22,9 +22,9 @@ const Home: React.FC = () => {
 
                 <ChallengesSection />
 
-                {/* <SolutionsSection />
+                <SolutionsSection />
 
-                <div id="about">
+                {/*<div id="about">
                     <TeamsSection />
                 </div>
 
